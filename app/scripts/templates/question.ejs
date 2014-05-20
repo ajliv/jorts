@@ -1,0 +1,21 @@
+<div class="col-xs-6">
+    <p>Is this person wearing jorts?</p>
+
+    <div class="btn-toolbar">
+        <button type="button" class="btn btn-answer answer answer-yeah"><span>Yeah</span></button>
+        <button type="button" class="btn btn-answer answer answer-nope"><span>Nope</span></button>
+    </div>
+
+    <div class="current-score">SCORE: <span class="score"><%= game.score %></span></div>
+
+    <div class="strikes num-strikes-<%= game.wrong %>">
+        <ul>
+            <% for (var i = 0; i < game.wrong; i++) { %>
+            <li>X</li>
+            <% } %>
+        </ul>
+    </div>
+</div>
+<div class="col-xs-6">
+    <img src="<%= crop %>" alt="" class="jorter">
+</div>
