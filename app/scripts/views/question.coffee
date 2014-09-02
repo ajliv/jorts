@@ -16,7 +16,6 @@ define [
 
         initialize: (options) ->
             @game = options.game
-            @
 
         render: () ->
             @$el.html @template @data()

@@ -16,7 +16,6 @@ define [
 
         render: () => 
             if @model.get('wrong') >= 3
-                JORTS.vent.trigger 'game:over', @model.get 'score'
                 @remove()
             else
                 question = @collection.at @model.get 'answered'

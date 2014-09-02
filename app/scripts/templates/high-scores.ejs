@@ -1,9 +1,9 @@
-<h2>Leaderboard</h2>
+<h2 class="header">Leaderboard</h2>
 <table class="table">
     <thead>
         <tr>
-            <td>Player</td>
-            <td>Score</td>
+            <td class="player-name">Player</td>
+            <td class="player-score">Score</td>
         </tr>
     </thead>
     <tbody>
@@ -11,8 +11,8 @@
     <% for (var i = 0; i < scores.length; i++) {
         var score = scores[i]; %>
         <tr>
-            <td><label><%= i+1 %>.</label> <%= score.Player.username %></td>
-            <td><strong><%= score.Score.score %></strong></td>
+            <td class="player-name"><label><%= i+1 %>.</label> <%= score.Player.username %></td>
+            <td class="player-score"><strong><%= score.Score.score %></strong></td>
         </tr>
     <% } %>
 

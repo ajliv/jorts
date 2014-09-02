@@ -23,7 +23,6 @@ require [
     'views/app'
 ], (_, Backbone, AppView) ->
     window.JORTS =
-        vent: _.extend {}, Backbone.Events
         apiKey: '3bfd78557fa3e2970eda35fbb9a6238a8612ba3f'
         gameID: '79f4f32de9'
         questions: QUESTIONS

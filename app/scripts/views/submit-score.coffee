@@ -43,8 +43,5 @@ define [
             @model.save { username: username.toUpperCase() }, {
                 success: => 
                     console.log 'saved'
-                    @collection.getScores () => 
-                        @remove()
-                        window.vent.trigger 'score:submit' 
-                error: -> window.vent.trigger 'score:submit' 
+                    @collection.getScores () => @remove()
             }

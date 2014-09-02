@@ -28,9 +28,8 @@ define [
 
             @listenToOnce @highScores, 'reset', @render
             @listenTo @model, 'change:answered', @onAnswer
-
-            JORTS.vent.on 'score:submit', @showHighScores, @
-            JORTS.vent.on 'error', @render, @
+            @listenTo @model, 'error', @render
+            @listenTo @model, 'sync', @showHighScores
 
             @highScores.getScores()
 
@@ -61,8 +60,6 @@ define [
             @
 
         onAnswer: () ->
-            console.log 'onAnswer'
-            
             return false unless @model.get('wrong') >= 3
 
             if @model.get('score') > @highScores.minimum or @highScores.length < 10
